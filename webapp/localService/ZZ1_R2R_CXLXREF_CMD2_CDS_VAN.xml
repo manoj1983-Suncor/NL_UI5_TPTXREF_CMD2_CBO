@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='S4H')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='S4H')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='S4H')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='S4H')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='S4H')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='S4H')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zz1_r2r_cxlxref_cmd2_cds/$metadata">
+        <edmx:Include Namespace="ZZ1_R2R_CXLXREF_CMD2_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zz1_r2r_cxlxref_cmd2_cds_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/SAP_UUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/_SAPSysAdminDataChangeUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/_SAPSysAdminDataCreateUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/USER_GROUP"/>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/CMD_GROUP"/>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/CMD_CLASS"/>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/EMAIL_DISTRB"/>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/SAP_CreatedByUser">
+                <Annotation Term="Common.Text" Path="SAP_CreatedByUser_Text">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type/SAP_LastChangedByUser">
+                <Annotation Term="Common.Text" Path="SAP_LastChangedByUser_Text">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZZ1_R2R_CXLXREF_CMD2_CDS.ZZ1_R2R_CXLXREF_CMD2Type">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="CXLXREF_CMD2"/>
+                            <PropertyValue Property="ID" String="R2R_CXLXREF_CMD2"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="General Information"/>
+                                        <PropertyValue Property="ID" String="R2R_CXLXREF_CMD2GeneralInformation"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralInformation"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="System Administrative Data"/>
+                                        <PropertyValue Property="ID" String="R2R_CXLXREF_CMD2SystemAdministrativeData"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SystemAdministrativeData"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneralInformation">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="USER_GROUP"/>
+                                    <PropertyValue Property="Value" Path="USER_GROUP"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CMD_GROUP"/>
+                                    <PropertyValue Property="Value" Path="CMD_GROUP"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CMD_CLASS"/>
+                                    <PropertyValue Property="Value" Path="CMD_CLASS"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="EMAIL_DISTRB"/>
+                                    <PropertyValue Property="Value" Path="EMAIL_DISTRB"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="SystemAdministrativeData">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Created On"/>
+                                    <PropertyValue Property="Value" Path="SAP_CreatedDateTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Created By"/>
+                                    <PropertyValue Property="Value" Path="SAP_CreatedByUser"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Last Changed On"/>
+                                    <PropertyValue Property="Value" Path="SAP_LastChangedDateTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Last Changed By"/>
+                                    <PropertyValue Property="Value" Path="SAP_LastChangedByUser"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="R2R_CXLXREF_CMD2"/>
+                        <PropertyValue Property="TypeNamePlural" String="R2R_CXLXREF_CMD2s"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="USER_GROUP"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="USER_GROUP"/>
+                            <PropertyValue Property="Value" Path="USER_GROUP"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="CMD_GROUP"/>
+                            <PropertyValue Property="Value" Path="CMD_GROUP"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="CMD_CLASS"/>
+                            <PropertyValue Property="Value" Path="CMD_CLASS"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="EMAIL_DISTRB"/>
+                            <PropertyValue Property="Value" Path="EMAIL_DISTRB"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Created On"/>
+                            <PropertyValue Property="Value" Path="SAP_CreatedDateTime"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Created By"/>
+                            <PropertyValue Property="Value" Path="SAP_CreatedByUser"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Last Changed On"/>
+                            <PropertyValue Property="Value" Path="SAP_LastChangedDateTime"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Last Changed By"/>
+                            <PropertyValue Property="Value" Path="SAP_LastChangedByUser"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
